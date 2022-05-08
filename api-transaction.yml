@@ -1,2 +1,26 @@
 server:
   port: 8085
+spring:
+  data:
+    mongodb:
+      database: dbTransaction
+      port: 27017
+      host: localhost
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+info:
+  app:
+    name: Spring Boot Actuator Api Transaction
+    web: '*'
+  hello: Hi here!
+logging:
+  level:
+    root: info
